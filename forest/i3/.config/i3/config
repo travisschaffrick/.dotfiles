@@ -217,16 +217,14 @@ bindsym $mod+d exec "rofi -modi drun -show drun -sorting-method fzf -drun-match-
 # feh
 exec_always --no-startup-id feh --bg-fill $HOME/Pictures/Wallpapers/snowy_pixel.png
 
-# draculerrrr
-# class                 border  bground text    indicator child_border
-client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
-client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
-client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
-client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
-client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
-
-client.background       #F8F8F2
-
+# colors
+#                       border    background  text      indicator  child_border
+client.focused          #7ee86b   #4a755d     #FFFFFF   #8be8e8    #7ee86b
+client.focused_inactive #3d5c46   #2b3d33     #aaaaaa   #2b3d33    #3d5c46
+client.unfocused        #2b3d33   #1e2b24     #aaaaaa   #2b3d33    #2b3d33
+client.urgent           #e86b6b   #4a1c1c     #FFFFFF   #e86b6b    #e86b6b
+client.placeholder      #aaaaaa   #243328     #aaaaaa   #243328    #aaaaaa
+client.background       #2b3d33
 
 # auto tile
 exec bash -c "python3 /home/travis/repos/i3-alternating-layout/alternating_layouts.py"
