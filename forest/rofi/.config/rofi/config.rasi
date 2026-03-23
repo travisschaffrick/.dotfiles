@@ -1,0 +1,118 @@
+/* forest.rasi — matches i3 client color scheme */
+
+* {
+    /* base palette */
+    bg-primary:     #2b3d33;
+    bg-secondary:   #1e2b24;
+    bg-focused:     #4a755d;
+    bg-urgent:      #4a1c1c;
+
+    fg-normal:      #aaaaaa;
+    fg-focused:     #ffffff;
+    fg-urgent:      #ffffff;
+
+    accent:         #7ee86b;
+    urgent:         #e86b6b;
+    cyan:           #8be8e8;
+
+    /* reset rofi's own defaults */
+    background-color: transparent;
+    text-color:       @fg-normal;
+    border-color:     @accent;
+}
+
+window {
+    background-color: @bg-primary;
+    border:           2px;
+    border-color:     @accent;
+    border-radius:    6px;
+    padding:          12px;
+    width:            30%;
+}
+
+mainbox {
+    background-color: transparent;
+    spacing:          8px;
+}
+
+inputbar {
+    background-color: @bg-secondary;
+    border:           0 0 2px 0;
+    border-color:     @accent;
+    border-radius:    4px 4px 0 0;
+    padding:          8px 12px;
+    spacing:          8px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    background-color: transparent;
+    text-color:       @accent;
+}
+
+entry {
+    background-color: transparent;
+    text-color:       @fg-focused;
+    placeholder:      "type to filter…";
+    placeholder-color: @fg-normal;
+}
+
+listview {
+    background-color: transparent;
+    lines:            8;
+    columns:          1;
+    spacing:          2px;
+    fixed-height:     true;
+    scrollbar:        false;
+}
+
+element {
+    background-color: transparent;
+    text-color:       @fg-normal;
+    padding:          6px 12px;
+    border-radius:    4px;
+    orientation:      horizontal;
+    spacing:          8px;
+}
+
+element selected.normal {
+    background-color: @bg-focused;
+    text-color:       @fg-focused;
+    border:           0 0 0 3px;
+    border-color:     @accent;
+}
+
+element selected.urgent {
+    background-color: @bg-urgent;
+    text-color:       @fg-urgent;
+    border:           0 0 0 3px;
+    border-color:     @urgent;
+}
+
+element.urgent {
+    text-color: @urgent;
+}
+
+element-icon {
+    background-color: transparent;
+    size:             1.2em;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}
+
+message {
+    background-color: @bg-secondary;
+    border:           1px;
+    border-color:     @cyan;
+    border-radius:    4px;
+    padding:          6px 12px;
+}
+
+textbox {
+    background-color: transparent;
+    text-color:       @cyan;
+}

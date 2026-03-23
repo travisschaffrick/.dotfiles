@@ -6,13 +6,13 @@ let g:colors_name = "forest"
 
 hi Normal          guifg=#e8e8c8  guibg=#1a2b1e  ctermfg=254  ctermbg=234
 hi CursorLine      guibg=#243328  ctermbg=235    cterm=NONE   gui=NONE
-hi CursorLineNr    guifg=#7ee86b  guibg=#192318  ctermfg=113
-hi LineNr          guifg=#3d5c46  guibg=#192318  ctermfg=240
+hi CursorLineNr    guifg=#7ee86b  guibg=NONE     cterm=NONE
+hi LineNr          guifg=#4a755d  guibg=NONE     ctermfg=240
 hi StatusLine      guifg=#1a2b1e  guibg=#4a755d  ctermfg=234  ctermbg=65   cterm=NONE gui=NONE
 hi StatusLineNC    guifg=#3d5c46  guibg=#243328  ctermfg=240  ctermbg=235  cterm=NONE gui=NONE
 hi Visual          guibg=#2b4a35  ctermbg=236
 hi ColorColumn     guibg=#3d5c46  ctermbg=237
-hi VertSplit       guifg=#3d5c46  guibg=#1a2b1e  ctermfg=240
+hi VertSplit       guifg=#3d5c46  guibg=NONE  ctermfg=240
 hi SignColumn      guibg=#1a2b1e  ctermbg=234
 hi Pmenu           guifg=#e8e8c8  guibg=#243328  ctermfg=254  ctermbg=235
 hi PmenuSel        guifg=#1a2b1e  guibg=#7ee86b  ctermfg=234  ctermbg=113

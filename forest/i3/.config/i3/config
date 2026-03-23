@@ -209,13 +209,13 @@ bindsym $mod+r mode "resize"
  exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # picom
-# exec --no-startup-id picom --config ~/.config/picom/picom.conf
+ exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
 # ROFI!!!!!
-bindsym $mod+d exec "rofi -modi drun -show drun -sorting-method fzf -drun-match-fields name"
+bindsym $mod+d exec "rofi -modi drun -show drun -sorting-method fzf -drun-match-fields name -theme ~/.config/rofi/config.rasi"
 
 # feh
-exec_always --no-startup-id feh --bg-fill $HOME/Pictures/Wallpapers/snowy_pixel.png
+exec_always --no-startup-id feh --bg-fill $HOME/Pictures/Wallpapers/lake.jpg
 
 # colors
 #                       border    background  text      indicator  child_border
@@ -227,22 +227,19 @@ client.placeholder      #aaaaaa   #243328     #aaaaaa   #243328    #aaaaaa
 client.background       #2b3d33
 
 # auto tile
-exec bash -c "python3 /home/travis/repos/i3-alternating-layout/alternating_layouts.py"
-
-
-# no black screen pls
-exec --no-startup-id glxgears -geometry 1x1+0+0
-exec --no-startup-id "sleep 1 && pkill glxgears"
+exec_always bash -c "python3 /home/travis/repos/i3-alternating-layout/alternating_layouts.py"
 
 # Take a full-screen screenshot
 bindsym Print exec --no-startup-id flameshot full -p ~/Pictures
 # Open selection tool for screenshot
 bindsym Shift+Print exec --no-startup-id flameshot gui
 
-# ranger
-bindsym $mod+shift+f exec --no-startup-id ~/.local/bin/toggle-ranger.sh
-for_window [instance="ranger"] move scratchpad
-
 # pavucontrol
 # 1320 for 1 screen
 for_window [class="pavucontrol"] floating enable, resize set 600 450, move position 3240 0 
+
+# i3 gaps
+gaps inner 10
+gaps outer 6
+
+default_border pixel 2
