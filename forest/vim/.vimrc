@@ -1,7 +1,7 @@
 " === Core ===
 syntax on
 set termguicolors
-colorscheme forest
+silent! colorscheme forest
 
 " === UI ===
 set nu rnu
@@ -30,15 +30,8 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
-" === Vundle ===
-set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'ycm-core/YouCompleteMe'
-
-call vundle#end()
+" === Plugins ===
+call plug#begin()
+Plug 'norcalli/nvim-colorizer.lua'
+call plug#end()
 filetype plugin indent on
